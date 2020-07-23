@@ -16,7 +16,7 @@ type Element struct {
 }
 
 type Instances struct {
-	Name string `json:"name" yaml:"name"`
+	Name       string            `json:"name" yaml:"name"`
 	Parameters map[string]string `json:"parameters" yaml:"parameters"`
 }
 
@@ -45,7 +45,7 @@ func processElement(element Element, namespace []string, aliases []string, insta
 				command = strings.ReplaceAll(command, a, b)
 			}
 
-			alias := fmt.Sprintf(`alias %s = '%s'`, strings.Join(namespace, ``) + i.Name, command)
+			alias := fmt.Sprintf(`alias %s = '%s'`, strings.Join(namespace, ``)+i.Name, command)
 			aliases = append(aliases, alias)
 		}
 
@@ -56,7 +56,6 @@ func processElement(element Element, namespace []string, aliases []string, insta
 
 	return aliases
 }
-
 
 func Process(data string) ([]string, error) {
 	var elements Elements

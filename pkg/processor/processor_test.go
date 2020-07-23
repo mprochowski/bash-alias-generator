@@ -39,7 +39,7 @@ func TestProcess(t *testing.T) {
 		t.Errorf("Got error %s", err)
 	}
 
-	if ! reflect.DeepEqual(e, aliases) {
+	if !reflect.DeepEqual(e, aliases) {
 		t.Errorf("Expected %v got %v", e, aliases)
 	}
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/mprochowski/bash-alias-generator/pkg/processor"
 )
+
 //var data = `[
 //	{
 //		"name": "abc",

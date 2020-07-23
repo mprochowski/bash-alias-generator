@@ -6,7 +6,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-var decoders = []func([]byte, interface{}) error {
+var decoders = []func([]byte, interface{}) error{
 	json.Unmarshal,
 	yaml.Unmarshal,
 }
