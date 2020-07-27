@@ -1,4 +1,4 @@
-package processor
+package generator
 
 import (
 	"reflect"
@@ -33,7 +33,7 @@ func TestProcess(t *testing.T) {
     - name: ssh
       command: "ssh IP"`
 
-	aliases, err := Process(d)
+	aliases, err := Generate(d)
 
 	if err != nil {
 		t.Errorf("Got error %s", err)

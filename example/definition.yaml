@@ -1,0 +1,18 @@
+- name: cs
+  children:
+    - name: node
+      instances:
+        - name: 1
+          parameters:
+            IP: 192.168.0.101
+        - name: 2
+          parameters:
+            IP: 192.168.0.102
+        - name: 3
+          parameters:
+            IP: 192.168.0.103
+      children:
+        - name: ping
+          command: "ping IP"
+        - name: ssh
+          command: "ssh IP"

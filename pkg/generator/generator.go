@@ -1,4 +1,4 @@
-package processor
+package generator
 
 import (
 	"fmt"
@@ -57,7 +57,7 @@ func processElement(element Element, namespace []string, aliases []string, insta
 	return aliases
 }
 
-func Process(data string) ([]string, error) {
+func Generate(data string) ([]string, error) {
 	var elements Elements
 	var aliases []string
 
